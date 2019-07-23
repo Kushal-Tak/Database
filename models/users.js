@@ -4,6 +4,7 @@ const user_roles = require('../models/user_roles').user_roles
 
 const Model = Sequelize.Model;
 class Users extends Model {}
+
 Users.init({
   // attributes
   id: {
@@ -49,14 +50,17 @@ Users.init({
   
 });
 
-//Users.sync();
-// sequelize.sync()
-//   .then(() => Users.create({
-//     // user_name:'Kushal',
-//     // role_id:1,
-//     // email:'kushal.tak@quantiphi.com'
-    
-//   }))
+// Users.sync({force:true}).then( ()=>{
+
+//     return Users.create({
+//         user_name: 'Sameer',
+//         role_id:1,
+//         email: 'sameer@quantiphi.com'
+
+
+//     })
+
+// });
 
 module.exports={
   Users

@@ -15,7 +15,7 @@ interviewer_role.init({
     primaryKey:true,
     references: {
       model: interviewers,
-      key: 'id',
+      key: 'user_id',
      }
     // allowNull defaults to true
   },
@@ -49,7 +49,7 @@ interviewer_role.init({
   
 });
 
-//interviewer_role.sync({force:true});
+interviewer_role.sync({force:true})
 
 module.exports={
   interviewer_role

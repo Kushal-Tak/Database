@@ -1,6 +1,5 @@
 const Sequelize = require('../index').Sequelize
 const sequelize = require('../index').sequelize
-const candidates = require('../models/candidates').candidates
 const Model = Sequelize.Model;
 
 class Drive extends Model {}
@@ -48,6 +47,8 @@ Drive.init({
 module.exports={
   Drive
 }
+
+//Drive.sync();
 // sequelize.sync()
 //   .then(() => Drive.create({
     

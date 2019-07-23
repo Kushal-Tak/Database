@@ -76,3 +76,14 @@ can_interviewer.init({
   modelName: 'can_interviewer',
   timestamps:false 
 });
+
+can_interviewer.sync().then(()=>{
+
+  return can_interviewer.create({
+      can_id:1,
+      interviewer_id:11,
+      role_id:2,
+      status_id:1
+
+  })
+});

@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
 // Option 1: Passing parameters separately
-const sequelize = new Sequelize('DrivePortal', 'root', 'password', {
-  host: 'localhost',
+const sequelize = new Sequelize('DrivePortal', 'admin', 'admin123', {
+  host: 'drive-portal.cniw8p6tx7sx.us-east-1.rds.amazonaws.com',
   dialect: 'mysql'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
 });
 

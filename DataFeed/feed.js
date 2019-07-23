@@ -89,7 +89,7 @@ class Feed {
                 //To fetch User ID of interviewer
                 await users.findOne({ where: { email: row.email } }).then(res => {
                     userid = res.dataValues.id//res.id;
-                    console.log(res.dataValues.id);
+                  //  console.log(res.dataValues.id);
                 })
                 let temp= {
                     name: row.name,
@@ -97,14 +97,20 @@ class Feed {
                     profile: row.profile,
                     round: row.rounds,
                     user_id: userid,
+                    email:row.email
                 }
-                data.push(temp);
-
-                let role_array = row.role.split(',');              
+               // console.log(temp.name)
+                await data.push(temp);
+                let role_array = row.role.split(',');    
+               // console.log("ROLE"+role_array)          
                 new Feed().feedInter_Roles(role_array,userid);
             });
-            interviewers.bulkCreate(data)
 
+            // setTimeout( ()=>{
+            //     interviewers.bulkCreate(data)
+            // },9000)
+           
+ 
         });
     }
 
@@ -115,7 +121,7 @@ class Feed {
         role_array.map((i)=>{
 
             let id = map.get(i)
-
+            console.log("???????????????????"+id);
             interviewer_role.create({
                 interviewer_id: userid,
                 role_id : id

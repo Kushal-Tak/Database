@@ -38,6 +38,45 @@ status.init({
   
 });
 
+//   status.bulkCreate(
+//     {
+//     status_name:'R1 Hold'
+//     },
+//     { 
+//       status_name:'R1 Reject'
+//   },
+//   { 
+//     status_name:'R2Hold'
+//   },
+//   {
+//     status_name:'R2 Select'
+//     },
+//     { 
+//       status_name:'R2 Reject'
+//   },
+//   { 
+//     status_name:'R3 Hold'
+//   },
+
+//   {
+//     status_name:'R3 Select'
+//     },
+//     { 
+//       status_name:'R3 Reject'
+//   },
+//   { 
+//     status_name:'HR Hold'
+//   },
+
+//   {
+//     status_name:'HR Select'
+//     },
+//     { 
+//       status_name:'HRReject'
+//   }
+// )
+
+
 module.exports={
   status
 }

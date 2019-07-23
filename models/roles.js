@@ -4,6 +4,7 @@ const Sequelize = require('../index').Sequelize
 
 const Model = Sequelize.Model;
 class roles extends Model {}
+
 roles.init({
   // attributes
   id: {
@@ -38,6 +39,8 @@ roles.init({
   timestamps:false
   
 });
+
+//roles.sync();
 
 module.exports={
   roles

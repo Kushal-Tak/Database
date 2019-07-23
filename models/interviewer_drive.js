@@ -17,7 +17,7 @@ interviewer_drive.init({
     primaryKey:true,
     references: {
       model: interviewers,
-      key: 'id',
+      key: 'user_id',
      }
     // allowNull defaults to true
   },

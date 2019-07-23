@@ -92,7 +92,8 @@ candidates.init({
   
 });
 
-candidates.sync({force:true})
+//candidates.sync({force:true})
+
 module.exports={
   candidates
 }
